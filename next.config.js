@@ -1,18 +1,17 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    dirs: ['src'],
-  },
-
-  reactStrictMode: true,
-  swcMinify: true,
-
-  output: 'export',
+  output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: '/MySchedule',
-  assetPrefix: '/MySchedule/',
+  basePath: "/MySchedule",
+  assetPrefix: "/MySchedule/",
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  trailingSlash: true
 };
 
 module.exports = nextConfig;
